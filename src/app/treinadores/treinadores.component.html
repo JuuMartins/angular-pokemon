@@ -1,0 +1,29 @@
+<h2>Treinadores Pokemon</h2>
+
+<div>
+  <label>Nome do Treinador Pokemon:
+    <input #treinadorNome />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(treinadorNome.value); treinadorNome.value=''">
+    Add
+  </button>
+</div>
+
+<ul class="treinadores">
+  <li *ngFor="let treinador of treinadores">
+    <a routerLink="/detail/{{treinador.id}}">
+      <span class="badge">{{treinador.id}}</span> {{treinador.nome}}
+    </a>
+    <button class="delete" title="delete treinador"
+      (click)="delete(treinador)">x</button>
+  </li>
+</ul>
+
+<ul class="treinadores">
+  <li *ngFor="let treinador of treinadores">
+    <a routerLink="/detail/{{treinador.id}}">
+      <span class="badge">{{treinador.id}}</span> {{treinador.nome}}
+    </a>
+  </li>
+</ul>

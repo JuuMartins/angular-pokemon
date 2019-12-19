@@ -1,0 +1,14 @@
+<div *ngIf="treinador">
+
+  <h2>{{treinador.nome | uppercase}} Details</h2>
+  <div><span>Id: </span>{{treinador.id}}</div>
+  <div>
+      <label>Nome:
+          <input [(ngModel)]="treinador.nome" placeholder="nome">
+      </label>
+  </div>
+  <div><span>Pokemons: </span><li *ngFor="let treinador of treinador.pokemons">{{treinador.nome}}</li></div>
+  <button (click)="goBack()">Go Back</button>
+  <button (click)="save()">Save</button>
+
+</div>

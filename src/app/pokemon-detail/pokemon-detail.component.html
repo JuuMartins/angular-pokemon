@@ -1,0 +1,11 @@
+<div *ngIf="pokemon">
+
+  <h2>{{pokemon.name | uppercase}} Details</h2>
+  <div><span>Id: </span>{{pokemon.id}}</div>
+  <div>
+    <label>Nome:
+      <input [(ngModel)]="pokemon.nome" placeholder="nome"/>
+    </label>
+  </div>
+
+</div>
